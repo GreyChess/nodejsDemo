@@ -1,1 +1,1 @@
-# nodejsDemo
+boot:  DEBUG=demoApp:* npm start

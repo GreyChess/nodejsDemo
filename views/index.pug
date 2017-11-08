@@ -1,0 +1,27 @@
+extends layout
+
+append header
+    script(src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous")
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous")
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous")
+block content
+  h1= title
+  p Welcome to #{title}
+  p This code is #{"<escaped>!"}
+  - var list = ["Uno", "Dos", "Tres", "Cuatro", "Cinco", "Seis"]
+  each item in list
+    li= item
+
+      -var values= []
+  ul
+    each val in values ? values : ['There is only one']
+      li= val
+
+block demoBody
+  div(class= "card" style= "width: 20rem;")
+    img(class= "card-img-top" src= "/images/Koala.jpg" alt= "Card image cap")
+    div(class= "card-body")
+        h4(class= "card-title") Card title
+        p(class="card-text") Some quick example text to build on the card title and make up the bulk of the card's content.
+        a(href="#" class="btn btn-primary") Go somewhere
