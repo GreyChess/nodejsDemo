@@ -9,15 +9,15 @@ var connection = mysql.createConnection({
 })
 
 connection.connect();
-exports.query = function(sqlStatement){
+exports.query = function(sqlStatement, successCallback){
+    var result = null;
     connection.query(sqlStatement, function(err, rows, fields){
         if(err){
             throw err;
         }
-        if(rows.length > 0){
-            rows.forEach(function(rowItem){
-                console.log(rowItem);
-            })
+        result = rows;
+        if(typeof successCallback == "function"){
+            successCallback(result);
         }
     });
 };
