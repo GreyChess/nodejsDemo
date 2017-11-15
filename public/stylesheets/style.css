@@ -2,6 +2,11 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
+.carousel-size {
+  max-height: 400;
+  max-width: 800;
+}
+
 a {
   color: #00B7FF;
 }

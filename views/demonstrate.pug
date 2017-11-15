@@ -1,0 +1,26 @@
+extends layout
+
+append header
+
+block content
+    div.carousel-size
+      div.carousel.slide#carouselExample(data-ride="carousel")
+        ol.carousel-indicators
+          li(data-target="#carouselExample" data-slide-to="0")
+          li(data-target="#carouselExample" data-slide-to="1")
+          li(data-target="#carouselExample" data-slide-to="2")
+        div.carousel-inner
+          div.carousel-item.active
+            img.d-block.w-100(src="/images/Hydrangeas.jpg" alt="First slide")
+          div.carousel-item
+            img.d-blocke.w-100(src="/images/Koala.jpg" alt="Second slide")
+          div.carousel-item
+            img.d-block.w-100(src="/images/Penguins.jpg" alt="Third slide")
+        a.carousel-control-prev(href="#carouselExample" role="button" data-slide="prev")
+          span.carousel-control-prev-icon(aria-hidden="true")
+          span.sr-only
+            | Previous
+        a.carousel-control-next(href="#carouselExample" role="button" data-slide="next")
+          span.carousel-control-next-icon(aria-hidden="true")
+          span.sr-only
+            | Next
